@@ -1,11 +1,11 @@
 0
-53
+54
 __consumer_offsets 22 2
 first-topic 2 0
 __consumer_offsets 30 0
 __consumer_offsets 8 0
 __consumer_offsets 21 0
-__consumer_offsets 4 0
+__consumer_offsets 4 175
 __consumer_offsets 27 0
 __consumer_offsets 7 0
 __consumer_offsets 9 0
@@ -44,6 +44,7 @@ __consumer_offsets 0 0
 __consumer_offsets 44 0
 __consumer_offsets 39 0
 __consumer_offsets 12 0
+random-number 0 131
 __consumer_offsets 45 0
 __consumer_offsets 1 0
 __consumer_offsets 5 0
