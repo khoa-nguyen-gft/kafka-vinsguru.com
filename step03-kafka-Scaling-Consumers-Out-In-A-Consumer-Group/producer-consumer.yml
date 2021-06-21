@@ -72,3 +72,14 @@ services:
       - ZK_HOSTS=zoo:2181
     depends_on:
       - zoo
+  producer:
+    image: vinsdocker/kafka-producer
+    environment:
+      - BROKER=kafka1:19091
+      - TOPIC_NAME=first-topic
+  consumer:
+    image: vinsdocker/kafka-consumer
+    environment:
+      - BROKER=kafka2:19092
+      - MESSAGE_PROCESSING_TIME=0
+
