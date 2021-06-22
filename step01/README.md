@@ -2,7 +2,8 @@
 
 
 #The docker-compose will create 1 zookeeper, 3 kafka-brokers and 1 kafka manager. 
-docker-compose up
+docker-compose -f kafka-compose.yml up
+docker-compose -f postgres-mongo-compose.yml up
 
 
 #Once you have played with kafka cluster, you can bring entire cluster down by issuing below command
