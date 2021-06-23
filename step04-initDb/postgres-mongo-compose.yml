@@ -4,6 +4,8 @@ services:
     image: postgres:latest
     container_name: postgres
     # restart: always
+    ports:
+      - 5432:5432
     environment:
       - POSTGRES_USER=root
       - POSTGRES_PASSWORD=root
@@ -14,8 +16,6 @@ services:
       # - postgres:/var/lib/postgresql/data
       - ./postgres/data:/var/lib/postgresql/data
 
-    ports:
-      - 5432:5432
 ######################################################
   pgadmin:
     image: dpage/pgadmin4
@@ -33,35 +33,21 @@ services:
     volumes:
       - ./pgadmin4/data:/var/lib/pgadmin
 ######################################################
+# database url connection:
+#   mongodb://localhost:27017
+######################################################  
   mongodb:
     image: mongo
     container_name: mongodb
     hostname: mongodb
-    environment:
-      - MONGO_INITDB_ROOT_USERNAME=root
-      - MONGO_INITDB_ROOT_PASSWORD=root
-      - MONGO_INITDB_DATABASE=orderdb
+    # environment:
+    #   - MONGO_INITDB_ROOT_USERNAME=root
+    #   - MONGO_INITDB_ROOT_PASSWORD=root
+    #   - MONGO_INITDB_DATABASE=orderdb
     ports:
       - 27017:27017
     volumes: 
-      - ./mongoDB/data:/data/db
-######################################################
-# database url connection:
-#   mongodb://127.0.0.1:27017/orderdb
-######################################################
-
-  mongoclient: 
-    image: mongoclient/mongoclient
-    container_name: mongoclient
-    hostname: mongoclient
-    ports:
-      - 3500:3000
-    volumes: 
-      - ./mongoClient/data:/data/db mongoclient/mongoclient
-    depends_on:
-      - mongodb
-    links: # <-- add this
-      - mongodb # <-- add this
+      - ./mongodb/data:/data/db
 
 # volumes:
 #   postgres:
