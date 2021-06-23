@@ -1,0 +1,33 @@
+[{
+  "_id": {
+    "$oid": "60d30c142d551e38fc3fbcd6"
+  },
+  "orderId": 1,
+  "userId": 1,
+  "productId": 1,
+  "price": 300
+},{
+  "_id": {
+    "$oid": "60d30c142d551e38fc3fbcd7"
+  },
+  "orderId": 2,
+  "userId": 2,
+  "productId": 1,
+  "price": 250
+},{
+  "_id": {
+    "$oid": "60d30c142d551e38fc3fbcd8"
+  },
+  "orderId": 3,
+  "userId": 2,
+  "productId": 2,
+  "price": 650
+},{
+  "_id": {
+    "$oid": "60d30c142d551e38fc3fbcd9"
+  },
+  "orderId": 4,
+  "userId": 3,
+  "productId": 3,
+  "price": 320
+}]
